@@ -28,7 +28,7 @@ jobs:
 
 
         curl https://purge.jsdelivr.net/gh/Phbeats/ScreenShot@gh-pages/*.*
-        curl -i -k  -H '{"Content-Type": "multipart/form-data","Accept": "application/json","Authorization": ${{ secrets.PIC_TOKEN }} }' -X POST -d '{"file": ${{ blog.phbeats.cn.jpg }} }' https://7bu.top/api/v1/upload/
+        curl -i -k  -H '{"Content-Type": "multipart/form-data","Accept": "application/json","Authorization": ${{ secrets.PIC_TOKEN }} }' -X POST -d '{"file": "blog.phbeats.cn.jpg" }' https://7bu.top/api/v1/upload/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
